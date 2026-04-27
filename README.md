@@ -26,6 +26,8 @@ Transforms raw health plan data into standardized formats
 Applies domain-specific logic for measure calculations, ID mapping, and data completion
 Handles missing values and recalculates metrics accurately
 
+[ AI-Agents-Forecasting-tool ](https://forecasting-tool-marwv6eqeykrwqw5vw7nrw.streamlit.app/) </b></i>
+
 # Technical Highlights
 Built with Python, Streamlit, and LangChain
 Uses Playwright for dynamic web scraping
