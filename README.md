@@ -1,26 +1,33 @@
-# Full Merged Streamlit App v3
+## AI-Powered Healthcare Analytics Tool
+Developed a multi-functional Streamlit application that integrates web scraping, data transformation, and retrieval-augmented generation
+(RAG). The tool automates Medicare appeals analysis, enables intelligent querying of large documents, and standardizes healthcare datasets
+with domain-specific logic, improving efficiency and decision-making workflows.
+
+## Full Merged Streamlit App
 
 This app includes:
 1. Medicare Appeals Search + Analysis
 2. PDF Q&A with grounded retrieval
 3. Health Plan Formatter
 
-## Updates in this version
-- Appeals tab shows summarized output only
-- Appeals tab no longer includes LLM Q&A on the analysis output
-- Appeals tab now includes a plain-language summary explaining how each appeals metric is calculated
-- MeasureID updates:
-  - MTM = 36
-  - N-API = 35
-  - SNP = 43
-- If numerator or denominator is missing in the input file, the formatter backfills them from Rate
-  - standard measures use denominator 100
-  - N-CHP and N-CDP use a default inferred denominator of 365
+## Key Capabilities
 
-## Local run
-pip install -r requirements.txt
-playwright install chromium
-streamlit run app.py
+# Medicare Appeals Analysis
+Automatically scrapes and aggregates appeals data from external sources
+Performs structured analysis to compute key performance metrics (e.g., timeliness and unfavorable decision rates)
+Presents clean, summarized insights for decision-making
 
-## Streamlit secrets
-OPENAI_API_KEY = "your-key-here"
+# Document Intelligence (RAG)
+Allows users to upload large PDF documents
+Uses embeddings and vector search to enable grounded, context-aware question answering
+
+# Healthcare Data Formatter
+Transforms raw health plan data into standardized formats
+Applies domain-specific logic for measure calculations, ID mapping, and data completion
+Handles missing values and recalculates metrics accurately
+
+# Technical Highlights
+Built with Python, Streamlit, and LangChain
+Uses Playwright for dynamic web scraping
+Implements FAISS vector database for document retrieval
+Designed with a modular, multi-tool architecture for scalability
